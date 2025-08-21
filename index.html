@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=d, initial-scale=1.0">
+    <title>Shopping||Cart </title>
+    <!-- cdn.tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="script" href="./style/app.js">
+    <!-- Google Font -->
+
+</head>
+
+<body class="p-6">
+
+    <header>
+
+        <!-- Navbar -->
+        <div class="sticky top-0 navbar bg-sky-500/80 p-4">
+            <div class="flex-1 text-2xl ">
+                <a class="text-3xl font-bold text-black">City eShop</a>
+                <div class="">
+                    <ul class="flex gap-6 font-semibold p-4">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex-none">
+                <!-- Cart Dropdown -->
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle">
+                        <div class="indicator text-2xl">
+                            <!-- cart icon -->
+                            🛒
+                            <span id="cart-count" class="badge badge-sm indicator-item text-md">0</span>
+                        </div>
+                    </label>
+                    <div id="cart-dropdown" tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-80">
+                        <h3 class="font-bold">Shopping Cart Items</h3>
+                        <ul id="cart-items" class="mt-2 space-y-1"></ul>
+                        <p class="mt-2 font-semibold">Total Items: <span id="total-items">0</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero Section -->
+        <div class="grid grid-cols-1 justify-items-center w-100%">
+            <img class="grid grid-cols-1 grid:lg:w-48" src="./assets/Fresh Fruits.png" alt="">
+        </div>
+        <div class="h-14 bg-gradient-to-r from-violet-500 to-fuchsia-500">
+
+        </div>
+        <!-- shopping cart template design architect below:-->
+
+        <!-- Product List -->
+        <div class="grid sm:grid-cols-1 md:grid-cols-4  mt-12 space-y-4">
+            <!-- Cart No: 01 -->
+            <div class="card w-80 bg-base-100 border-stone-800 shadow-md mt-2">
+                <div class="card-body">
+                    <span><img src="./assets/product-1.jpg" alt="Apple"></span>
+                    <h1 class="card-title">Apple-Gala</h1>
+                    <p>China Fuji Apple (1kg = 360 taka)</p>
+                    <h2 class="card-title mb-8">Price 340 Tk.</h2>
+                    <button class="btn bg-sky-500/75 add-to-cart data-price=" 20"">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Cart No: 02 -->
+            <div class="card w-80 bg-base-100 border-stone-800 shadow-md mt-2">
+                <div class="card-body">
+                    <span><img src="./assets/product-2.jpg" alt="Shagor Kola"></span>
+                    <h1 class="card-title">Shagor Kola</h1>
+                    <p>Deshi Kola (12Pcs = 110 taka)</p>
+                    <h2 class="card-title mb-8">Price 110 Tk.</h2>
+                    <button class="btn bg-sky-500/75 add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Cart No: 03 -->
+            <div class="card w-80 bg-base-100 border-stone-800 shadow-md mt-2">
+                <div class="card-body">
+                    <span><img src="./assets/product-3.jpg" alt="Pepe"></span>
+                    <h1 class="card-title">Papaya Paka-Pepe</h1>
+                    <p>Thai & Deshi Pepe (1kg = 169 taka.)</p>
+                    <h2 class="card-title mb-8">Price 169 Tk.</h2>
+                    <button class="btn bg-sky-500/75 add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Cart No: 04 -->
+            <div class="card w-80 bg-base-100 border-stone-800 shadow-md mt-2">
+                <div class="card-body">
+                    <span><img src="./assets/product-4.jpg" alt="Malta"></span>
+                    <h1 class="card-title">Malta</h1>
+                    <p>Product of China (1kg of 5pcs-6pcs)</p>
+                    <h2 class="card-title mb-8">Price 360 Tk.</h2>
+                    <button class="btn bg-sky-500/75 add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Cart No: 05 -->
+            <div class="card w-80 bg-base-100 border-stone-800 shadow-md mt-2">
+                <div class="card-body">
+                    <span><img src="./assets/product-5.jpg" alt="Guava"></span>
+                    <h1 class="card-title">Guava Premium</h1>
+                    <p>Product of Deshi (1kg of 4pcs-6pcs)</p>
+                    <h2 class="card-title mb-8">Price 100 Tk.</h2>
+                    <button class="btn bg-sky-500/75 add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Cart No: 06 -->
+            <div class="card w-80 bg-base-100 border-stone-800 shadow-md mt-2">
+                <div class="card-body">
+                    <span><img src="./assets/product-6.jpg" alt="Orange"></span>
+                    <h1 class="card-title">Komola (Orange)</h1>
+                    <p>Product of China (1kg of 5pcs-7pcs)</p>
+                    <h2 class="card-title mb-8">Price 310 Tk.</h2>
+                    <button class="btn bg-sky-500/75 add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Cart No: 07 -->
+            <div class="card w-80 bg-base-100 border-stone-800 shadow-md mt-2">
+                <div class="card-body">
+                    <span><img src="./assets/product-7.jpg" alt="Dragon Fruit"></span>
+                    <h1 class="card-title">Dragon Fruit Local</h1>
+                    <p>Deshi & China (1kg of 4pcs-6pcs)</p>
+                    <h2 class="card-title mb-8">Price 210 Tk.</h2>
+                    <button class="btn bg-sky-500/75 add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Cart No: 08 -->
+            <div class="card w-80 bg-base-100 border-stone-800 shadow-md mt-2">
+                <div class="card-body">
+                    <span><img src="./assets/product-8.jpg" alt="Dalim"></span>
+                    <h1 class="card-title">Dalim (Pomegranate)</h1>
+                    <p>Produc of k.kashan(1kg of 4-5pcs)</p>
+                    <h2 class="card-title mb-8">Price 390 Tk.</h2>
+                    <button class="btn bg-sky-500/75 add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Cart No: 09 -->
+            <div class="card w-80 bg-base-100 border-stone-800 shadow-md mt-2">
+                <div class="card-body">
+                    <span><img src="./assets/product-9.jpg" alt="Guava Juice"></span>
+                    <h1 class="card-title">Nutrilife Guava Juice</h1>
+                    <p>Produc of UAE (1Ltr. of 385 taka)</p>
+                    <h2 class="card-title mb-8">Price 385 Tk.</h2>
+                    <button class="btn bg-sky-500/75 add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Cart No: 10 -->
+            <div class="card w-80 bg-base-100 border-stone-800 shadow-md mt-2">
+                <div class="card-body">
+                    <span><img src="./assets/product-10.jpg" alt="Apple Juice"></span>
+                    <h1 class="card-title">Nutrilife Apple Juice</h1>
+                    <p>Produc of UAE (1Ltr. of 395 taka)</p>
+                    <h2 class="card-title mb-8">Price 395 Tk.</h2>
+                    <button class="btn bg-sky-500/75 add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Cart No: 11 -->
+            <div class="card w-80 bg-base-100 border-stone-800 shadow-md mt-2">
+                <div class="card-body">
+                    <span><img src="./assets/product-11.jpg" alt="Mango Juice"></span>
+                    <h1 class="card-title">Nutrilife Mango Juice</h1>
+                    <p>Product of Bhutan (1Ltr.of 290 taka)</p>
+                    <h2 class="card-title mb-8">Price 290 Tk.</h2>
+                    <button class="btn bg-sky-500/75 add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Cart No: 12 -->
+            <div class="card w-80 bg-base-100 border-stone-800 shadow-md mt-2">
+                <div class="card-body">
+                    <span><img src="./assets/product-12.jpg" alt="Pineapple Juice"></span>
+                    <h1 class="card-title">Fontana Pineapple Juice</h1>
+                    <p>Product of Cyprus (1Ltr.of 395 taka)</p>
+                    <h2 class="card-title mb-8">Price 395 Tk.</h2>
+                    <button class="btn bg-sky-500/75 add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+
+            <div class="card w-64 bg-base-100 shadow-xl">
+
+            </div>
+        </div>
+
+
+    </header>
+
+    <main>
+
+
+
+    </main>
+
+    <footer></footer>
+
+    <script>
+
+
+        let cart = [];
+        const cartCount = document.getElementById("cart-count");
+        const cartItems = document.getElementById("cart-items");
+        const totalItems = document.getElementById("total-items");
+
+        document.querySelectorAll(".add-to-cart").forEach((btn, index) => {
+            btn.addEventListener("click", () => {
+                const productName = btn.parentElement.querySelector(".card-title").innerText;
+                cart.push(productName);
+                updateCart();
+            });
+        });
+
+        function updateCart() {
+            cartCount.innerText = cart.length;
+            totalItems.innerText = cart.length;
+
+            cartItems.innerHTML = "";
+            cart.forEach((item, i) => {
+                let li = document.createElement("li");
+                li.innerText = `${i + 1}. ${item}`;
+                cartItems.appendChild(li);
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>
