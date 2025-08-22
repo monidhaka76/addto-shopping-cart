@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>city eshop||Services</title>
+
 </head>
 
 <body>
@@ -17,12 +18,31 @@
 
     <main>
 
+
+
+
+
     </main>
 
 
     <footer>
 
     </footer>
+
+    <script>
+        const btn = document.getElementById("toggleBtn");
+        const grid = document.getElementById("cardGrid");
+
+        btn.addEventListener("click", () => {
+            if (grid.classList.contains("grid-cols-4")) {
+                grid.classList.remove("grid-cols-4");
+                grid.classList.add("grid-rows-3");
+            } else {
+                grid.classList.remove("grid-rows-3");
+                grid.classList.add("grid-cols-4");
+            }
+        });
+    </script>
 
 </body>
 
